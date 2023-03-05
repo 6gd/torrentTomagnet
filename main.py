@@ -17,7 +17,7 @@ class Msg(BaseModel):
 
 
 
-@app.get("/TorrentToMagnet/")
+@app.get("/TorrentToMagnet")
 async def get_mangeurl(urlTorrnet: str):
     response = requests.get(urlTorrnet)
     magnet_link = magneturi.from_torrent_data(response.content)
